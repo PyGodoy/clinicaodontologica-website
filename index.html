@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Oral Health</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/script.js"></script>
+</head>
+<body>
+    <!-- Top white space -->
+    <div class="top-white-space"></div>
+
+    <!-- Logo that extends from white space to hero -->
+    <div class="logo-container">
+        <img src="static/images/logo.png" alt="Logo" class="logosss">
+        <img src="static/images/banner.png" alt="Logo" class="logosss mobile-logo">
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Navigation -->
+<nav class="container mx-auto px-6 py-4">
+    <!-- Botão hamburger para mobile -->
+    <button class="mobile-menu-btn md:hidden">
+        <span class="hamburger-icon">☰</span>
+    </button>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu hidden md:hidden">
+        <nav class="flex flex-col items-center bg-black bg-opacity-90 fixed top-0 right-0 w-full h-full z-50 py-10">
+            <button class="close-menu-btn absolute top-4 right-4 text-white text-2xl">
+                ✕
+            </button>
+            <a href="#" class="nav-link mb-4">INÍCIO</a>
+            <a href="#" class="nav-link mb-4">SOBRE</a>
+            <a href="#" class="nav-link mb-4">PROFISSIONAIS</a>
+            <a href="#" class="nav-link mb-4">TRATAMENTOS</a>
+            <a href="#" class="nav-link mb-4">DEPOIMENTOS</a>
+            <a href="#" class="nav-link mb-4">AGENDAR</a>
+            <a href="#" class="nav-link mb-4">CURSOS</a>
+            
+            <!-- Social Icons para mobile -->
+            <div class="flex space-x-4 mt-6">
+                <a href="#" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fas fa-location-dot"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Menu Desktop -->
+    <div class="hidden md:flex justify-end items-center space-x-8">
+        <!-- Navigation Links -->
+        <div class="flex-1 flex justify-center space-x-8">
+            <a href="#" class="nav-link">INÍCIO</a>
+            <a href="#" class="nav-link">SOBRE</a>
+            <a href="#" class="nav-link">PROFISSIONAIS</a>
+            <a href="#" class="nav-link">TRATAMENTOS</a>
+            <a href="#" class="nav-link">DEPOIMENTOS</a>
+            <a href="#" class="nav-link">AGENDAR</a>
+            <a href="#" class="nav-link">CURSOS</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex space-x-4">
+            <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fas fa-location-dot"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+
+        <!-- Hero Content -->
+        <div class="flex items-center justify-center h-full">
+            <div class="text-center text-white">
+                <h1 class="text-5xl font-bold mb-4">Recupere sua autoestima</h1>
+                <p class="text-xl mb-8">Implante Dentários, resgate a segurança em sorrir!</p>
+                <a href="#" class="schedule-btn">
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    AGENDE AGORA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- A Clínica -->
+    <section class="marble-bg py-20">
+        <div class="container mx-auto px-6">
+            <p class="text-sm gold-text text-center mb-4">INSTITUTO ORAL HEALTH</p>
+            <h2 class="text-4xl font-bold mb-12 text-center">A Clínica</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="before-after-slider">
+                        <div class="slides-container">
+                            <div class="slide">
+                                <img src="static/images/exterior.jpg" alt="Exterior" />
+                            </div>
+                            <div class="slide">
+                                <img src="static/images/interior1.png" alt="Interior 1" />
+                            </div>
+                            <div class="slide">
+                                <img src="static/images/interior2.jpg" alt="Interior 2" />
+                            </div>
+                            <div class="slide">
+                                <img src="static/images/interior3.jpg" alt="Interior 3" />
+                            </div>
+                        </div>
+                        
+                        <button class="prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        
+                        <div class="indicators">
+                            <div class="active"></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Depois de 20 anos em São Paulo, como Cirurgiã Dentista e professor na Universidade de Marília, fomos
+                        convidados eu e minha esposa a sermos professores na Faculdade de Odontologia no Itpac de Porto
+                        Nacional e resolvemos aceitar o novo desafio. Agora estamos investindo nesse novo estado o qual agora é
+                        nossa casa atual. Iniciando nossas atividades aqui como Cirurgiões Dentistas, além de professores que
+                        somos, criando o Instituto Oral Health Palmas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="bg-black py-20">
+        <div class="container mx-auto px-6">
+            <p class="text-sm gold-text text-center mb-4">DIFERENCIAIS</p>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="flex flex-col justify-center">
+                    <!-- Quebra de linhas para o título e frase -->
+                    <h2 class="text-4xl font-bold text-white mb-8 leading-tight">
+                        A melhor<br>
+                        tecnologia<br>
+                        para combinar<br>
+                        a estética e<br>
+                        saúde
+                    </h2>
+                </div>
+                <div class="relative">
+                    <div class="video-container">
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full"
+                            src="https://www.youtube.com/embed/XdEmAh2cVrE"
+                            title="Vídeo Instituto Oral Health"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especialidades -->
+    <section class="marble-bg py-20">
+        <div class="container mx-auto px-6">
+            <p class="text-sm gold-text text-center mb-4">ESPECIALIDADES</p>
+            <h2 class="text-4xl font-bold mb-8 text-center">Todos os tratamentos em um só lugar</h2>
+            <p class="text-center mb-12">O Instituto Oral Health reúne a estrutura mais completa, com os procedimentos mais modernos e eficazes e uma equipe experiente, competente e que está sempre pertinho de você.</p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div class="text-center">
+                    <i class="fas fa-tooth text-2xl md:text-4xl gold-text mb-2 md:mb-4"></i>
+                    <h3 class="font-semibold text-xs md:text-base">Ortodontia</h3>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-teeth text-2xl md:text-4xl gold-text mb-2 md:mb-4"></i>
+                    <h3 class="font-semibold text-xs md:text-base">Prótese Dentária</h3>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-smile text-2xl md:text-4xl gold-text mb-2 md:mb-4"></i>
+                    <h3 class="font-semibold text-xs md:text-base">Harmonização Facial</h3>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-star text-2xl md:text-4xl gold-text mb-2 md:mb-4"></i>
+                    <h3 class="font-semibold text-xs md:text-base">Implante Dentário</h3>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-teeth-open text-2xl md:text-4xl gold-text mb-2 md:mb-4"></i>
+                    <h3 class="font-semibold text-xs md:text-base">Periodontia</h3>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-tooth text-2xl md:text-4xl gold-text mb-2 md:mb-4"></i>
+                    <h3 class="font-semibold text-xs md:text-base">Restaurações</h3>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-user-md text-2xl md:text-4xl gold-text mb-2 md:mb-4"></i>
+                    <h3 class="font-semibold text-xs md:text-base">Endodontia</h3>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-magic text-2xl md:text-4xl gold-text mb-2 md:mb-4"></i>
+                    <h3 class="font-semibold text-xs md:text-base">Clareamento</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lente de Contato Dental -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <p class="text-sm gold-text text-center mb-4">CONQUISTE O SORRISO DOS SONHOS</p>
+            <h2 class="text-4xl font-bold mb-12 text-center">Lente de contato dental</h2>
+            
+            <div class="dental-carousel relative">
+                <div class="carousel-container overflow-hidden">
+                    <div class="carousel-track flex transition-transform duration-500">
+                        <!-- Primeiro slide - 3 imagens -->
+                        <div class="carousel-slide w-full flex-shrink-0">
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div class="relative overflow-hidden rounded-lg aspect-[4/3]">
+                                    <img src="/static/images/dente1.jpg" alt="Antes e Depois 1" class="w-full h-full object-cover">
+                                </div>
+                                <div class="relative overflow-hidden rounded-lg aspect-[4/3]">
+                                    <img src="/static/images/dente2.jpg" alt="Antes e Depois 2" class="w-full h-full object-cover">
+                                </div>
+                                <div class="relative overflow-hidden rounded-lg aspect-[4/3]">
+                                    <img src="/static/images/dente1.jpg" alt="Antes e Depois 3" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Segundo slide - 3 imagens -->
+                        <div class="carousel-slide w-full flex-shrink-0">
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div class="relative overflow-hidden rounded-lg aspect-[4/3]">
+                                    <img src="/static/images/dente2.jpg" alt="Antes e Depois 4" class="w-full h-full object-cover">
+                                </div>
+                                <div class="relative overflow-hidden rounded-lg aspect-[4/3]">
+                                    <img src="/static/images/dente1.jpg" alt="Antes e Depois 5" class="w-full h-full object-cover">
+                                </div>
+                                <div class="relative overflow-hidden rounded-lg aspect-[4/3]">
+                                    <img src="/static/images/dente2.jpg" alt="Antes e Depois 6" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Terceiro slide - 3 imagens -->
+                        <div class="carousel-slide w-full flex-shrink-0">
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div class="relative overflow-hidden rounded-lg aspect-[4/3]">
+                                    <img src="/static/images/dente1.jpg" alt="Antes e Depois 7" class="w-full h-full object-cover">
+                                </div>
+                                <div class="relative overflow-hidden rounded-lg aspect-[4/3]">
+                                    <img src="/static/images/dente2.jpg" alt="Antes e Depois 8" class="w-full h-full object-cover">
+                                </div>
+                                <div class="relative overflow-hidden rounded-lg aspect-[4/3]">
+                                    <img src="/static/images/dente1.jpg" alt="Antes e Depois 9" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-r">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-l">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <div class="flex justify-center mt-8">
+                    <div class="slider-dot active"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="bg-black py-20">
+        <div class="container mx-auto px-6">
+            <p class="text-sm gold-text text-center mb-4">DEPOIMENTOS</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-6 rounded-lg text-white">
+                    <p class="mb-4">"Amo muito... Cuidam de mim desde 2017. Me prepararam para o meu casamento e agora cuidam da minha ortodontia. São os melhores!"</p>
+                    <p class="font-bold">- Melissa</p>
+                </div>
+                <div class="testimonial-card p-6 rounded-lg text-white">
+                    <p class="mb-4">"Se você está procurando uma clínica de alta qualidade, encontrou o Instituto Oral Health. Sem dúvida, os melhores. Recomendo!"</p>
+                    <p class="font-bold">- Pedro</p>
+                </div>
+                <div class="testimonial-card p-6 rounded-lg text-white">
+                    <p class="mb-4">"Amo o atendimento da clínica. Super chiques e éticos. Ótimo atendimento do Dr. Maria, vou recomendar a todos os meus amigos e colegas."</p>
+                    <p class="font-bold">- Ana</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nossa Equipe -->
+    <section class="marble-bg py-20">
+        <div class="container mx-auto px-6">
+            <p class="text-sm gold-text text-center mb-4">DENTISTAS</p>
+            <h2 class="text-4xl font-bold mb-8 text-center">Uma equipe multidisciplinar para cuidar de você</h2>
+            <p class="text-center mb-12">O time do Instituto Oral Health é formado por profissionais capacitados, experientes e éticos, que atuam e que fazem o que mais gostam de fazer e em sua função com alegria e comprometimento.</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="team-card">
+                    <img src="/static/images/foto1.jpg" alt="Dr. Sérgio" class="w-full rounded-lg mb-4">
+                    <h3 class="font-bold text-xl">Dr. Sérgio Ricardo B. Esteves</h3>
+                    <p class="text-gray-600">CRO-TO 3464</p>
+                </div>
+                <div class="team-card">
+                    <img src="/static/images/foto2.jpg" alt="Dra. Nádya" class="w-full rounded-lg mb-4">
+                    <h3 class="font-bold text-xl">Dra. Nádya Duarte Dias</h3>
+                    <p class="text-gray-600">CRO TO 3269</p>
+                </div>
+                <div class="team-card">
+                    <img src="/static/images/foto3.jpg" alt="Dra. Patricia" class="w-full rounded-lg mb-4">
+                    <h3 class="font-bold text-xl">Dra. Patrícia Cruz</h3>
+                    <p class="text-gray-600">CRO TO 2622</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gold-bg py-20">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm text-white mb-4">ESPERAMOS POR VOCÊ</p>
+            <h2 class="text-4xl font-bold text-white mb-8">Vamos agendar seu horário?</h2>
+            <p class="text-white mb-8">Pré-agende rapidamente aqui pelo site ou mande um WhatsApp.</p>
+            <a href="#" class="bg-black text-white px-8 py-3 rounded hover:bg-opacity-90 inline-flex items-center">
+                <i class="fab fa-whatsapp mr-2"></i> AGENDE AGORA
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="/static/images/logo.png" alt="Logo" class="h-12 mb-4">
+                    <p class="text-gray-600">Instituto Oral Health - Excelência em saúde bucal e estética dental.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Atendimento</h3>
+                    <p class="text-gray-600 mb-2">(63) 99237-9727</p>
+                    <p class="text-gray-600 mb-2">(63) 3215-2984</p>
+                    <p class="text-gray-600">Segunda à Sexta: 8h às 18h</p>
+                    <p class="text-gray-600">Sábados: 9h às 12h</p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Endereço</h3>
+                    <p class="text-gray-600">Quadra 104 N, s/n</p>
+                    <p class="text-gray-600">Rua NE 11 Lt 42, Sala 01 e 02</p>
+                    <p class="text-gray-600">77006018, Palmas – TO</p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Responsável Técnico</h3>
+                    <p class="text-gray-600">Dra. Nádya D. D. Esteves</p>
+                    <p class="text-gray-600">CRO-TO 3464</p>
+                    <p class="text-gray-600">CRO TO EPAO 269</p>
+                </div>
+            </div>
+            
+            <div class="border-t pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-600 text-sm mb-4 md:mb-0">
+                    Copyright © 2024 INSTITUTO ORAL HEALTH. Desenvolvido por Super Dental®
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-600 hover:text-gold"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-gold"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-gold"><i class="fas fa-location-dot"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
