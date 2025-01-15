@@ -104,7 +104,7 @@
             <p class="text-sm gold-text text-center mb-4">INSTITUTO ORAL HEALTH</p>
             <h2 class="text-4xl font-bold mb-12 text-center">A Clínica</h2>
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="relative">
+                <div class="relative slide-container">
                     <div class="before-after-slider">
                         <div class="slides-container">
                             <div class="slide">
@@ -136,7 +136,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="text-container">
                     <p class="text-gray-700 leading-relaxed">
                         Depois de 20 anos em São Paulo, como Cirurgiã Dentista e professor na Universidade de Marília, fomos
                         convidados eu e minha esposa a sermos professores na Faculdade de Odontologia no Itpac de Porto
@@ -149,28 +149,25 @@
         </div>
     </section>
 
-    <!-- Diferenciais -->
+        <!-- Diferenciais Section -->
     <section class="bg-black py-20">
         <div class="container mx-auto px-6">
             <p class="text-sm gold-text text-center mb-4">DIFERENCIAIS</p>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="flex flex-col justify-center">
-                    <!-- Quebra de linhas para o título e frase -->
+            <div class="diferenciais-container">
+                <div class="flex flex-col justify-center text-container">
                     <h2 class="text-4xl font-bold text-white mb-8 leading-tight">
-                        A melhor<br>
-                        tecnologia<br>
-                        para combinar<br>
-                        a estética e<br>
-                        saúde
+                        A melhor tecnologia para combinar a estética e saúde
                     </h2>
                 </div>
-                <div class="relative">
-                    <div class="video-container">
+                <div class="video-wrapper w-full">
+                    <div class="video-responsive">
                         <iframe 
-                            class="absolute top-0 left-0 w-full h-full"
+                            width="560"
+                            height="315"
                             src="https://www.youtube.com/embed/XdEmAh2cVrE"
                             title="Vídeo Instituto Oral Health"
                             frameborder="0"
+                            loading="lazy"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
