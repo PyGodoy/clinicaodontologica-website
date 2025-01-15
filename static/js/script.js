@@ -167,26 +167,42 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// BOTÃO DO MOBILE
 document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const closeMenuBtn = document.querySelector('.close-menu-btn');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const body = document.body;
+    // Only initialize mobile menu functionality if it's visible (screen width <= 768px)
+    if (window.innerWidth <= 768) {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuContainer = document.getElementById('menuContainer');
+        
+        menuToggle.addEventListener('click', function() {
+            menuContainer.classList.toggle('active');
+        });
 
-    function toggleMenu() {
-        mobileMenu.classList.toggle('hidden');
-        body.style.overflow = mobileMenu.classList.contains('hidden') ? '' : 'hidden';
+        // Close menu when clicking a link
+        const menuLinks = document.querySelectorAll('.nav-menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuContainer.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInside = menuContainer.contains(event.target) || 
+                                menuToggle.contains(event.target);
+            
+            if (!isClickInside && menuContainer.classList.contains('active')) {
+                menuContainer.classList.remove('active');
+            }
+        });
     }
+});
 
-    mobileMenuBtn.addEventListener('click', toggleMenu);
-    closeMenuBtn.addEventListener('click', toggleMenu);
-
-    // Fechar menu ao clicar em um link
-    const mobileLinks = mobileMenu.querySelectorAll('.nav-link');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', toggleMenu);
-    });
+// Handle resize events
+window.addEventListener('resize', function() {
+    const menuContainer = document.getElementById('menuContainer');
+    if (window.innerWidth > 768) {
+        menuContainer.classList.remove('active');
+    }
 });
 
 // Espera o DOM carregar completamente

@@ -21,6 +21,10 @@
     margin-bottom: 10px;
 }
 
+.mobile-nav {
+    display: none;
+}
+
 .mobile-logo {
     display: none;
 }
@@ -31,39 +35,6 @@
     background-position: center;
     height: calc(100vh - 40px);
     position: relative;
-}
-
-.mobile-menu-btn {
-    display: none;
-    position: absolute; /* Mudando de fixed para absolute */
-    top: 20px;
-    right: 20px;
-    z-index: 100;
-    background: none;
-    border: none;
-    color: #C5A572; /* Mudando para dourado */
-    font-size: 24px;
-    cursor: pointer;
-    padding: 8px;
-    background-color: transparent; /* Removendo o fundo escuro */
-    border-radius: 5px;
-}
-
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-    z-index: 99;
-}
-
-.close-menu-btn {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
 }
 
 .nav-link {
@@ -315,26 +286,6 @@
         display: none;
     }
 
-    /* Ajustando a posição da logo mobile */
-    .mobile-logo {
-        display: block;
-        position: absolute;
-        left: 50%;
-        top: -80px; /* Ajustando para posicionar a logo no espaço branco */
-        transform: translateX(-50%);
-        width: 144px;
-        height: auto;
-        margin: 0;
-        z-index: 10;
-    }
-
-    /* Ajuste do container da logo */
-    .logo-container {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-
     /* Ajuste da seção hero */
     .hero-section {
         height: auto;
@@ -343,22 +294,87 @@
         text-align: center;
     }
 
-    .mobile-menu-btn {
+    .mobile-nav {
         display: block;
-        top: -64px; /* Ajustando posição vertical */
-        left: 20px; /* Mudando de right para left */
-        right: auto; /* Removendo o right */
-        position: absolute;
-        background-color: #C5A572; /* Garantindo a cor dourada */
-        color: white;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1001;
     }
 
-    .mobile-menu .nav-link {
-        font-size: 18px;
-        padding: 15px;
-        display: block;
-        text-align: center;
+    .nav-header {
+        position: fixed; /* Mudando para fixed */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        border-bottom: 1px solid #eee;
+        height: 80px;
+        z-index: 1001;
+    }
+
+    .menu-toggle {
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #C5A572;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .nav-logo {
+        height: 40px;
+        width: auto;
+    }
+
+    .phone-link {
+        color: #C5A572;
+        text-decoration: none;
+        font-size: 24px;
+    }
+
+    .menu-container {
+        position: fixed;
+        top: 80px; /* Altura do nav-header */
+        left: 0;
+        width: 100%;
+        background-color: #9F814C;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        z-index: 1000;
+    }
+
+    .menu-container.active {
+        max-height: 400px;
+    }
+
+    .nav-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-menu li {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-menu li a {
+        color: white;
+        text-decoration: none;
+        padding: 15px 20px;
+        display: block;
+        font-size: 14px;
+        transition: background-color 0.3s;
+    }
+
+    .nav-menu li a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
     }
 
     /* Botão de agendamento */
@@ -378,22 +394,6 @@
     .text-container {
         order: 1; /* Garante que o texto fique abaixo do contêiner de slides */
         padding-top: 20px; /* Adiciona um espaçamento superior ao texto */
-    }
-
-    /* Carrossel */
-    .dental-carousel {
-        padding: 0 15px;
-    }
-
-    .carousel-slide .grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .carousel-slide img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
     }
 
     /* Botões do carrossel */
@@ -433,28 +433,34 @@
         padding-bottom: 40px;
     }
 
-    /* Grid de imagens */
-    .grid.md\:grid-cols-3,
-    .grid.md\:grid-cols-4 {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-    .aspect-\[4\/3\] {
-        aspect-ratio: 4/3;
-        width: 100%;
-        max-width: 350px;
-        margin: 0 auto;
-    }
-
     /* Ajuste dos slides */
-    .carousel-track {
-        align-items: center;
+    .carousel-slide .grid {
+        grid-template-columns: repeat(3, 80%); /* 3 colunas com 80% de largura cada */
+        gap: 15px;
+        overflow-x: auto; /* Permite rolar horizontalmente */
+        scroll-snap-type: x mandatory; /* Ajuda no snap durante a rolagem */
+        scrollbar-width: none; /* Remove scrollbar no Firefox */
+        -ms-overflow-style: none; /* Remove scrollbar no IE/Edge */
     }
 
-    .carousel-slide {
-        padding: 0 10px;
+    /* Remove scrollbar no Chrome/Safari */
+    .carousel-slide .grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Ajuste das imagens dentro do grid */
+    .carousel-slide .grid > div {
+        scroll-snap-align: start; /* Ajuda no snap durante a rolagem */
+        flex: 0 0 100%; /* Evita que a imagem encolha */
+        width: 100%;
+        max-width: none; /* Remove o max-width anterior */
+        margin: 0; /* Remove as margens */
+    }
+
+    .carousel-slide img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
     }
 
     /* Ícones sociais */

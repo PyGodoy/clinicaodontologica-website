@@ -24,37 +24,29 @@
         <!-- Navigation -->
 <nav class="container mx-auto px-6 py-4">
     <!-- Botão hamburger para mobile -->
-    <button class="mobile-menu-btn md:hidden">
-        <span class="hamburger-icon">☰</span>
-    </button>
-
-    <!-- Menu mobile -->
-    <div class="mobile-menu hidden md:hidden">
-        <nav class="flex flex-col items-center bg-black bg-opacity-90 fixed top-0 right-0 w-full h-full z-50 py-10">
-            <button class="close-menu-btn absolute top-4 right-4 text-white text-2xl">
-                ✕
-            </button>
-            <a href="#" class="nav-link mb-4">INÍCIO</a>
-            <a href="#" class="nav-link mb-4">SOBRE</a>
-            <a href="#" class="nav-link mb-4">PROFISSIONAIS</a>
-            <a href="#" class="nav-link mb-4">TRATAMENTOS</a>
-            <a href="#" class="nav-link mb-4">DEPOIMENTOS</a>
-            <a href="#" class="nav-link mb-4">AGENDAR</a>
-            <a href="#" class="nav-link mb-4">CURSOS</a>
-            
-            <!-- Social Icons para mobile -->
-            <div class="flex space-x-4 mt-6">
-                <a href="#" class="social-icon">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fas fa-location-dot"></i>
-                </a>
-            </div>
-        </nav>
+    <nav class="mobile-nav">
+        <div class="nav-header">
+            <button class="menu-toggle">☰</button>
+            <img src="static/images/banner.png" alt="Instituto Oral Health" class="nav-logo">
+            <a href="tel:123456789" class="phone-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+            </a>
+        </div>
+        
+        <div class="menu-container" id="menuContainer">
+            <ul class="nav-menu">
+                <li><a href="#inicio">INÍCIO</a></li>
+                <li><a href="#sobre">SOBRE</a></li>
+                <li><a href="#profissionais">PROFISSIONAIS</a></li>
+                <li><a href="#tratamentos">TRATAMENTOS</a></li>
+                <li><a href="#depoimentos">DEPOIMENTOS</a></li>
+                <li><a href="#agendar">AGENDAR</a></li>
+                <li><a href="#cursos">CURSOS</a></li>
+            </ul>
+        </div>
+    </nav>
     </div>
 
     <!-- Menu Desktop -->
